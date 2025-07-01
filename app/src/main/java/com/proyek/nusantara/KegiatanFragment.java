@@ -1,0 +1,219 @@
+package com.proyek.nusantara;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.proyek.nusantara.adapters.KegiatanAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link KegiatanFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class KegiatanFragment extends Fragment {
+
+    // Menambahkan kegiatan
+    private FloatingActionButton fabTambahKegiatan;
+    private EditText etPencarian;
+
+    private RecyclerView recyclerView;
+    private ProgressBar progressBar;
+    private KegiatanAdapter adapter;
+    private List<Kegiatan> list = new ArrayList<>();
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public KegiatanFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment KegiatanFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static KegiatanFragment newInstance(String param1, String param2) {
+        KegiatanFragment fragment = new KegiatanFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_kegiatan, container, false);
+
+        // Inisialisasi View
+        ImageView imgProfile = view.findViewById(R.id.imgProfile);
+        etPencarian = view.findViewById(R.id.searchEditText);
+        fabTambahKegiatan = view.findViewById(R.id.fabTambahKegiatan);
+        recyclerView = view.findViewById(R.id.recyclerViewKegiatan);
+        progressBar = view.findViewById(R.id.progressBar);
+
+        // Profile click
+        imgProfile.setOnClickListener(v -> {
+            Log.d("KegiatanFragment", "Profile diklik");
+            Intent intent = new Intent(getActivity(), ProfileActivity.class);
+            startActivity(intent);
+        });
+
+        // Pencarian
+        etPencarian.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int st, int c, int aft) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int st, int bef, int cnt) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                performSearch(s.toString());
+            }
+        });
+
+        etPencarian.setOnEditorActionListener((TextView v, int actionId, KeyEvent event) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                performSearch(v.getText().toString());
+                return true;
+            }
+            return false;
+        });
+
+        // FAB
+        fabTambahKegiatan.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), TambahKegiatanActivity.class);
+            startActivity(intent);
+        });
+
+
+        // RecyclerView
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new KegiatanAdapter(getContext());
+        recyclerView.setAdapter(adapter);
+
+        SessionManager session = new SessionManager(requireContext());
+
+        FirebaseFirestore.getInstance()
+                .collection("users")
+                .document(session.getUserId())
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        String base64Image = documentSnapshot.getString("profileImage");
+
+                        if (base64Image != null && !base64Image.isEmpty()) {
+                            Bitmap bitmap = Util.base64ToBitmap(base64Image);
+                            imgProfile.setImageBitmap(bitmap);
+                        } else {
+                            imgProfile.setImageResource(R.drawable.ic_launcher_foreground);
+                        }
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(requireContext(), "Gagal memuat data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+
+        // Ambil data
+        ambilDataKegiatan();
+
+        return view;
+    }
+
+    private void ambilDataKegiatan() {
+        // Tampilkan loading
+        progressBar.setVisibility(View.VISIBLE);
+        recyclerView.setVisibility(View.GONE);
+
+        db.collection("kegiatan")
+                .orderBy("tanggal", Query.Direction.DESCENDING)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    list.clear();
+                    for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                        Kegiatan kegiatan = doc.toObject(Kegiatan.class);
+                        list.add(kegiatan);
+                    }
+                    adapter.submitList(list);
+                    // Sembunyikan loading
+                    progressBar.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "Gagal: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    // Tetap sembunyikan loading
+                    progressBar.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                });
+    }
+
+    private void performSearch(String query) {
+        String lower = query.toLowerCase();
+        List<Kegiatan> filteredList = new ArrayList<>();
+        for (Kegiatan k : list) {
+            if (k.getJudul().toLowerCase().contains(lower)
+                    || k.getCeritaSingkat().toLowerCase().contains(lower)) {
+                filteredList.add(k);
+            }
+        }
+        adapter.submitList(filteredList);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ambilDataKegiatan();
+    }
+}
