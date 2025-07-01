@@ -1,6 +1,9 @@
 package com.proyek.nusantara.provinsi;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -8,12 +11,116 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.proyek.nusantara.PopupItem;
 import com.proyek.nusantara.R;
+import com.proyek.nusantara.adapters.PopupPagerAdapter;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class JawaTimur extends AppCompatActivity {
+
+    // Data untuk setiap kategori
+    private final List<PopupItem> pakaian = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> rumah = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> makanan = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> tarian = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> objekwisata = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> alatmusik = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> upacara = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> senjata = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> produk = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> permainan = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> flora = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
+
+    private final List<PopupItem> fauna = Arrays.asList(
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten"),
+            new PopupItem("link", "kabupaten")
+    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,65 +143,79 @@ public class JawaTimur extends AppCompatActivity {
                 .load("https://web-nusantara.vercel.app/assets/drawable/header_jawatimur.webp")
                 .into(headerprovinsi);
 
-        ImageView acehpakaian = findViewById(R.id.imgpakaian);
+        ImageView jawatimurpakaian = findViewById(R.id.imgpakaian);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurpakaian.webp")
-                .into(acehpakaian);
+                .into(jawatimurpakaian);
 
-        ImageView acehrumah = findViewById(R.id.imgrumah);
+        ImageView jawatimurrumah = findViewById(R.id.imgrumah);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/budaya_jawatimur.webp")
-                .into(acehrumah);
+                .into(jawatimurrumah);
 
-        ImageView acehmakanan = findViewById(R.id.imgmakanan);
+        ImageView jawatimurmakanan = findViewById(R.id.imgmakanan);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurmakanan.webp")
-                .into(acehmakanan);
+                .into(jawatimurmakanan);
 
-        ImageView acehtarian = findViewById(R.id.imgtarian);
+        ImageView jawatimurtarian = findViewById(R.id.imgtarian);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurtarian.webp")
-                .into(acehtarian);
+                .into(jawatimurtarian);
 
-        ImageView acehobjekwisata = findViewById(R.id.imgobjekwisata);
+        ImageView jawatimurobjekwisata = findViewById(R.id.imgobjekwisata);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurobjekwisata.webp")
-                .into(acehobjekwisata);
+                .into(jawatimurobjekwisata);
 
-        ImageView acehalatmusik = findViewById(R.id.imgalatmusik);
+        ImageView jawatimuralatmusik = findViewById(R.id.imgalatmusik);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimuralatmusik.jpg")
-                .into(acehalatmusik);
+                .into(jawatimuralatmusik);
 
-        ImageView acehupacara = findViewById(R.id.imgupacara);
+        ImageView jawatimurupacara = findViewById(R.id.imgupacara);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurupacara.webp")
-                .into(acehupacara);
+                .into(jawatimurupacara);
 
-        ImageView acehsenjata = findViewById(R.id.imgsenjata);
+        ImageView jawatimursenjata = findViewById(R.id.imgsenjata);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimursenjata.webp")
-                .into(acehsenjata);
+                .into(jawatimursenjata);
 
-        ImageView acehproduk = findViewById(R.id.imgproduk);
+        ImageView jawatimurproduk = findViewById(R.id.imgproduk);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurproduk.webp")
-                .into(acehproduk);
+                .into(jawatimurproduk);
 
-        ImageView acehpermainan = findViewById(R.id.imgpermainan);
+        ImageView jawatimurpermainan = findViewById(R.id.imgpermainan);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurpermainan.webp")
-                .into(acehpermainan);
+                .into(jawatimurpermainan);
 
-        ImageView acehflora = findViewById(R.id.imgflora);
+        ImageView jawatimurflora = findViewById(R.id.imgflora);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurflora.webp")
-                .into(acehflora);
+                .into(jawatimurflora);
 
-        ImageView acehfauna = findViewById(R.id.imgfauna);
+        ImageView jawatimurfauna = findViewById(R.id.imgfauna);
         Glide.with(this)
                 .load("https://web-nusantara.vercel.app/assets/drawable/jawatimurfauna.webp")
-                .into(acehfauna);
+                .into(jawatimurfauna);
+
+        jawatimurpakaian.setOnClickListener(v -> showPopupSlider(this, pakaian));
+        jawatimurrumah.setOnClickListener(v -> showPopupSlider(this, rumah));
+        jawatimurmakanan.setOnClickListener(v -> showPopupSlider(this, makanan));
+        jawatimurtarian.setOnClickListener(v -> showPopupSlider(this, tarian));
+        jawatimurobjekwisata.setOnClickListener(v -> showPopupSlider(this, objekwisata));
+        jawatimuralatmusik.setOnClickListener(v -> showPopupSlider(this, alatmusik));
+        jawatimurupacara.setOnClickListener(v -> showPopupSlider(this, upacara));
+        jawatimursenjata.setOnClickListener(v -> showPopupSlider(this, senjata));
+        jawatimurproduk.setOnClickListener(v -> showPopupSlider(this, produk));
+        jawatimurpermainan.setOnClickListener(v -> showPopupSlider(this, permainan));
+        jawatimurflora.setOnClickListener(v -> showPopupSlider(this, flora));
+        jawatimurfauna.setOnClickListener(v -> showPopupSlider(this, fauna));
+
 
         // tombol kembali
         FloatingActionButton fabback = findViewById(R.id.fabback);
@@ -102,5 +223,22 @@ public class JawaTimur extends AppCompatActivity {
             // Menutup aktivitas dan kembali ke sebelumnya
             finish();
         });
+    }
+
+    public void showPopupSlider(Context context, List<PopupItem> items) {
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.dialog_popup_slider);
+        ViewPager2 viewPager = dialog.findViewById(R.id.viewPagerPopup);
+        viewPager.setAdapter(new PopupPagerAdapter(context, items));
+
+        // Atur dialog fullscreen
+        if (dialog.getWindow() != null) {
+            dialog.getWindow()
+                    .setLayout(
+                            WindowManager.LayoutParams.MATCH_PARENT,
+                            WindowManager.LayoutParams.MATCH_PARENT
+                    );
+        }
+        dialog.show();
     }
 }
