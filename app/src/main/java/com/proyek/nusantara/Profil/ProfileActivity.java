@@ -1,13 +1,10 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.Profil;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,9 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -29,20 +23,20 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.proyek.nusantara.Postingan.DetailActivity;
+import com.proyek.nusantara.Postingan.EditKegiatanActivity;
+import com.proyek.nusantara.Postingan.Kegiatan;
+import com.proyek.nusantara.MasukAplikasi.LoginActivity;
+import com.proyek.nusantara.R;
+import com.proyek.nusantara.MasukAplikasi.SessionManager;
+import com.proyek.nusantara.Postingan.Util;
 import com.proyek.nusantara.adapters.ProfileKegiatanAdapter;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 

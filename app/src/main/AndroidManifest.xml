@@ -14,7 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nusantara"
         tools:targetApi="31">
-        <activity android:name=".EditProfileActivity" android:exported="false" />
+        <activity
+            android:name=".MasukAplikasi.ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Profil.EditProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".provinsi.PapuaBaratDaya"
             android:exported="false" />
@@ -130,22 +135,22 @@
             android:name=".provinsi.Aceh"
             android:exported="false" />
         <activity
-            android:name=".EditKegiatanActivity"
+            android:name=".Postingan.EditKegiatanActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".Postingan.DetailActivity"
             android:exported="false" /> <!-- <activity -->
         <!-- android:name=".SessionManager" -->
         <!-- android:exported="false" /> -->
         <activity
-            android:name=".ProfileActivity"
+            android:name=".Profil.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".TambahKegiatanActivity"
+            android:name=".Postingan.TambahKegiatanActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".MasukAplikasi.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.Nusantara.Splash">
             <intent-filter>
@@ -155,10 +160,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".MasukAplikasi.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".MasukAplikasi.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

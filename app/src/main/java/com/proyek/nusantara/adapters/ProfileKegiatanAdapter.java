@@ -10,16 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.google.firebase.Timestamp;
-import com.proyek.nusantara.DetailActivity;
-import com.proyek.nusantara.EditKegiatanActivity;
-import com.proyek.nusantara.Kegiatan;
+import com.proyek.nusantara.Postingan.DetailActivity;
+import com.proyek.nusantara.Postingan.EditKegiatanActivity;
+import com.proyek.nusantara.Postingan.Kegiatan;
 import com.proyek.nusantara.R;
 
 import java.text.SimpleDateFormat;

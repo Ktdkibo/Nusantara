@@ -1,4 +1,4 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.Postingan;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,9 +19,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.proyek.nusantara.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;

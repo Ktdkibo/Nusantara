@@ -1,8 +1,7 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.Menu;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,19 +10,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.proyek.nusantara.Profil.ProfileActivity;
+import com.proyek.nusantara.R;
+import com.proyek.nusantara.MasukAplikasi.SessionManager;
+import com.proyek.nusantara.Postingan.Util;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BerandaFragment#newInstance} factory method to
+ * Use the {@link SejarahFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BerandaFragment extends Fragment {
+public class SejarahFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +35,7 @@ public class BerandaFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BerandaFragment() {
+    public SejarahFragment() {
         // Required empty public constructor
     }
 
@@ -44,11 +45,11 @@ public class BerandaFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BerandaFragment.
+     * @return A new instance of fragment SejarahFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BerandaFragment newInstance(String param1, String param2) {
-        BerandaFragment fragment = new BerandaFragment();
+    public static SejarahFragment newInstance(String param1, String param2) {
+        SejarahFragment fragment = new SejarahFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,32 +69,14 @@ public class BerandaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_beranda, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_sejarah, container, false);
 
         ImageView imgProfile = view.findViewById(R.id.imgProfile);
         imgProfile.setOnClickListener(v -> {
             Log.d("BerandaFragment", "Profile diklik");
             Intent intent = new Intent(getActivity(), ProfileActivity.class);
             startActivity(intent);
-        });
-
-        Button btnTontonVideo = view.findViewById(R.id.btnTontonVideo);
-        btnTontonVideo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String videoUrl = "https://youtu.be/PLESqcjC1yM?si=GUxYrpP-RM2077i6";
-                Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoUrl));
-                appIntent.setPackage("com.google.android.youtube");
-
-                if (appIntent.resolveActivity(requireActivity().getPackageManager()) != null) {
-                    startActivity(appIntent);
-                } else {
-                    // Buka lewat browser kalau aplikasi YouTube tidak tersedia
-                    Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                            Uri.parse(videoUrl));
-                    startActivity(webIntent);
-                }
-            }
         });
 
         SessionManager session = new SessionManager(requireContext());

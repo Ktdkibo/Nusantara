@@ -1,4 +1,4 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.MasukAplikasi;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.Firebase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.proyek.nusantara.databinding.ActivityMainBinding;
+import com.proyek.nusantara.R;
 import com.proyek.nusantara.databinding.ActivityRegisterBinding;
 
 import java.util.HashMap;

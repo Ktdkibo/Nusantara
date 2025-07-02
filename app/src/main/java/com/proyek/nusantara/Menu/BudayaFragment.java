@@ -1,4 +1,4 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.Menu;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -21,6 +21,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.proyek.nusantara.Profil.ProfileActivity;
+import com.proyek.nusantara.R;
+import com.proyek.nusantara.MasukAplikasi.SessionManager;
+import com.proyek.nusantara.Postingan.Util;
 import com.proyek.nusantara.provinsi.Aceh;
 import com.proyek.nusantara.provinsi.Bali;
 import com.proyek.nusantara.provinsi.BangkaBelitung;
@@ -164,7 +168,7 @@ public class BudayaFragment extends Fragment {
 
         ImageView dkijakarta = view.findViewById(R.id.dkijakarta);
         Glide.with(this)
-                .load("https://web-nusantara.vercel.app/assets/drawable/budaya_dkijakarta.webp")
+                .load("https://web-nusantara.vercel.app/assets/drawable/budaya_dkijakarta.jpg")
                 .into(dkijakarta);
 
         ImageView gorontalo = view.findViewById(R.id.gorontalo);

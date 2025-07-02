@@ -1,4 +1,4 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.Postingan;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,7 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.bumptech.glide.Glide;
+import com.proyek.nusantara.R;
 
 public class DetailActivity extends AppCompatActivity {
 

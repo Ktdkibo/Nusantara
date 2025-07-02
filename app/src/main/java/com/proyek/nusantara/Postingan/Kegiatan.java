@@ -1,4 +1,4 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.Postingan;
 
 import com.google.firebase.Timestamp;
 

@@ -1,6 +1,4 @@
-package com.proyek.nusantara;
-
-import static androidx.core.app.ActivityCompat.startActivityForResult;
+package com.proyek.nusantara.Postingan;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -27,20 +25,18 @@ import androidx.core.view.WindowInsetsCompat;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.Timestamp;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.proyek.nusantara.R;
+import com.proyek.nusantara.MasukAplikasi.SessionManager;
 //import com.google.firebase.storage.FirebaseStorage;
 //import com.google.firebase.storage.StorageReference;
 //import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
-import java.util.UUID;
 
 public class TambahKegiatanActivity extends AppCompatActivity {
 

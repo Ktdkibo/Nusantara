@@ -11,12 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarItemView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.proyek.nusantara.Menu.BerandaFragment;
+import com.proyek.nusantara.Menu.BudayaFragment;
+import com.proyek.nusantara.Menu.KegiatanFragment;
+import com.proyek.nusantara.Menu.SejarahFragment;
 import com.proyek.nusantara.databinding.ActivityMainBinding;
-import com.proyek.nusantara.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
 

@@ -1,24 +1,26 @@
-package com.proyek.nusantara;
+package com.proyek.nusantara.MasukAplikasi;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+import com.proyek.nusantara.MainActivity;
+import com.proyek.nusantara.R;
 import com.proyek.nusantara.databinding.ActivityLoginBinding;
+
+import java.util.UUID;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -44,6 +46,52 @@ public class LoginActivity extends AppCompatActivity {
         session = new SessionManager(this);
 
         setupAction();
+
+        TextView tvLupaPassword = findViewById(R.id.tvLupaPassword);
+        tvLupaPassword.setOnClickListener(v -> {
+            EditText input = new EditText(this);
+            input.setHint("Masukkan email Anda");
+            new AlertDialog.Builder(this)
+                    .setTitle("Reset Password")
+                    .setMessage("Masukkan email yang terdaftar:")
+                    .setView(input)
+                    .setPositiveButton("Kirim", (dialog, which) -> {
+                        String email = input.getText().toString().trim();
+                        if (email.isEmpty()) {
+                            Toast.makeText(this, "Email tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                        } else {
+                            kirimTokenResetPassword(email);
+                        }
+                    })
+                    .setNegativeButton("Batal", null)
+                    .show();
+        });
+    }
+
+    private void kirimTokenResetPassword(String emailPengguna) {
+        String token = UUID.randomUUID().toString();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .whereEqualTo("email", emailPengguna)
+                .get()
+                .addOnSuccessListener(query -> {
+                    if (!query.isEmpty()) {
+                        DocumentReference userRef = query.getDocuments().get(0).getReference();
+                        userRef.update("resetToken", token)
+                                .addOnSuccessListener(aVoid -> {
+                                    // Simulasi: tampilkan pesan sukses
+                                    Toast.makeText(this, "Token reset telah dikirim ke email", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(this, ResetPassword.class);
+                                    intent.putExtra("email", emailPengguna); // opsional, untuk mengisi otomatis field email
+                                    startActivity(intent);
+                                });
+                    } else {
+                        Toast.makeText(this, "Email tidak ditemukan.", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(this, "Terjadi kesalahan.", Toast.LENGTH_SHORT).show();
+                });
     }
 
     private void setupAction() {
