@@ -50,11 +50,11 @@ public class SumateraBarat extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20agam.jpg", "Kabupaten Agam"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20pasaman.jpg", "Kabupaten Pasaman"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20pesisir%20selatan.jpg", "Kabupaten Pesisir Selatan"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20sijunjug.jpg", "Kabupaten Sijunjung"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20solok.jpg", "Kabupaten Solok")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

@@ -50,11 +50,11 @@ public class Jambi extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20batang%20ari.jpg", "Kabupaten Batanghari"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20bungo.jpg", "Kabupaten Bungo"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kerinci.jpg", "Kabupaten Kerinci"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20merangin.jpg", "Kabupaten Merangin"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20sarolangun.jpg", "Kabupaten Sarolangun")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

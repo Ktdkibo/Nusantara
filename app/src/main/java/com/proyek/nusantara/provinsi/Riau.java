@@ -50,11 +50,11 @@ public class Riau extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20bengkalis.jpg", "Kabupaten Bengkalis"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20indragiri%20hilir.jpg", "Kabupaten Indragiri Hilir"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kampar.jpg", "Kabupaten Kampar"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20pelalawan.jpg", "Kabupaten Pelalawan"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20siak.jpg", "Kabupaten Siak")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

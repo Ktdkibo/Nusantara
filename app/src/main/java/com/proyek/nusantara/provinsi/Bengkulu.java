@@ -46,11 +46,10 @@ public class Bengkulu extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kaur.jpg", "Kabupaten Kaur"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kepahing.jpg", "Kabupaten Kepahiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20lebong.jpg", "Kabupaten Lebong"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20mukomuko.jpg", "Kabupaten Mukomuko")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

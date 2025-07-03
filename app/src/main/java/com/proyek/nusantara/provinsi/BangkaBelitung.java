@@ -50,11 +50,8 @@ public class BangkaBelitung extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20bangka.jpg", "Kabupaten Bangka"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20pangkal%20pinang.jpg", "Kabupaten Pangkal Pinang")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

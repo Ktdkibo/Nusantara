@@ -44,17 +44,17 @@ public class KalimantanSelatan extends AppCompatActivity {
     private final List<PopupItem> makanan = Arrays.asList(
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/makanan%20balangan.jpg", "Kabupaten Balangan"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/makanan%20banjar.jpg", "Kabupaten Banjar"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/makanan%20barito kuala.jpg", "Kabupaten Barito Kuala"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/makanan%20barito%20kuala.jpg", "Kabupaten Barito Kuala"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/makanan%20kotabaru.jpg", "Kabupaten Kotabaru"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/makanan%20tabalong.jpg", "Kabupaten Tabalong")
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20balangan.jpg", "Kabupaten Balangan"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20banjar.jpg", "Kabupaten Banjar"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20barito%20kuala.jpg", "Kabupaten Barito Kuala"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kotabaru.jpg", "Kabupaten Kotabaru"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kotabalong.jpg", "Kabupaten Kota Balong")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

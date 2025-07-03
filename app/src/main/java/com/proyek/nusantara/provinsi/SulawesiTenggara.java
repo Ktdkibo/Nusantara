@@ -48,11 +48,10 @@ public class SulawesiTenggara extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20bombana.jpg", "Kabupaten Bombana"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20buton.jpg", "Kabupaten Buton"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kolaka.jpg", "Kabupaten Kolaka"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20konawe.jpg", "Kabupaten Konawe")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

@@ -48,11 +48,10 @@ public class PapuaBaratDaya extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20maybrat.jpg", "Kabupaten Maybrat"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20raja%20ampat.jpg", "Kabupaten Raja Ampat"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20sorong.jpg", "Kabupaten Sorong"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20tambrauw.jpg", "Kabupaten Tambrauw")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

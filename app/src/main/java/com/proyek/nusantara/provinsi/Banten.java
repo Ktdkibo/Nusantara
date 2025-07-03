@@ -48,11 +48,10 @@ public class Banten extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20lebak.jpg", "Kabupaten Lebak"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20pandeglang.jpg", "Kabupaten Pandeglang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20serang.jpg", "Kabupaten Serang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20tanggerang.jpg", "Kabupaten Tangerang")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

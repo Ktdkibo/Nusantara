@@ -50,11 +50,9 @@ public class Gorontalo extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20boalemo.jpg", "Kabupaten Boalemo"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20bone%20bolango.jpg", "Kabupaten Bone Bolango"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20gorontalo.jpg", "Kabupaten Gorontalo")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

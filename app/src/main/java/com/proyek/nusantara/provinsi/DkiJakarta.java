@@ -50,11 +50,8 @@ public class DkiJakarta extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20jakarta.jpg", "Kabupaten Jakarta"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20kepulauan%20seribu.jpg", "Kabupaten Kepulauan Seribu")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

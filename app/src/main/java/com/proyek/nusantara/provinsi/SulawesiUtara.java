@@ -47,11 +47,8 @@ public class SulawesiUtara extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20minahasa.jpg", "Kabupaten Minahasa"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20mongondow.jpg", "Kabupaten Bolaang Mongondow")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

@@ -48,11 +48,11 @@ public class JawaTengah extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20banjarnegara.jpg", "Kabupaten Banjarnegara"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20banyumas.jpg", "Kabupaten Banyumas"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20batang.jpg", "Kabupaten Batang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20blora.jpg", "Kabupaten Blora"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20brebes.jpg", "Kabupaten Brebes")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(

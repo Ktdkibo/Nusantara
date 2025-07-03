@@ -50,76 +50,75 @@ public class Aceh extends AppCompatActivity {
     );
 
     private final List<PopupItem> tarian = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Tarian Tradisional Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/tarian%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Objek Wisata Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> alatmusik = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Alat Musik Tradisional Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> upacara = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Upacara Adat Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> senjata = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Senjata Tradisional Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> produk = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Produk Khas Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> permainan = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Permainan Tradisional Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> flora = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Flora Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> fauna = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Fauna Aceh"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20pidie.jpg", "Kabupaten Pidie")
     );
 
     @Override
