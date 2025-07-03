@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -27,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
     private FirebaseFirestore db;
     private SessionManager session;
-
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         session = new SessionManager(this);
+        mAuth = FirebaseAuth.getInstance();
 
         setupAction();
 
@@ -69,28 +72,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void kirimTokenResetPassword(String emailPengguna) {
-        String token = UUID.randomUUID().toString();
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("users")
-                .whereEqualTo("email", emailPengguna)
-                .get()
-                .addOnSuccessListener(query -> {
-                    if (!query.isEmpty()) {
-                        DocumentReference userRef = query.getDocuments().get(0).getReference();
-                        userRef.update("resetToken", token)
-                                .addOnSuccessListener(aVoid -> {
-                                    // Simulasi: tampilkan pesan sukses
-                                    Toast.makeText(this, "Token reset telah dikirim ke email", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(this, ResetPassword.class);
-                                    intent.putExtra("email", emailPengguna); // opsional, untuk mengisi otomatis field email
-                                    startActivity(intent);
-                                });
+        mAuth.sendPasswordResetEmail(emailPengguna)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(this, "Link reset telah dikirim ke email", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(this, "Email tidak ditemukan.", Toast.LENGTH_SHORT).show();
                     }
-                })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(this, "Terjadi kesalahan.", Toast.LENGTH_SHORT).show();
                 });
     }
 
@@ -112,43 +100,32 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkAkun(String email, String password) {
-        db.collection("users")
-                .whereEqualTo("email", email)
-                .get()
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful() && !task.getResult().isEmpty()) {
-                        boolean isPasswordCorrect = false;
-                        String userId = null, userName = null, userToken = null;
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                        String userId = firebaseUser.getUid();
 
-                        for (QueryDocumentSnapshot doc : task.getResult()) {
-                            String storedPassword = doc.getString("password");
-                            if (storedPassword != null && storedPassword.equals(password)) {
-                                isPasswordCorrect = true;
-                                userId    = doc.getId();
-                                userName  = doc.getString("name");   // asumsikan ada field "name"
-                                userToken = doc.getString("token");  // atau token jika ada
-                                break;
-                            }
-                        }
+                        // Ambil data user dari Firestore jika perlu
+                        db.collection("users").document(userId)
+                                .get()
+                                .addOnSuccessListener(doc -> {
+                                    String userName = doc.getString("nama");
+                                    // Simpan session, dst.
+                                    session.createSession(userId, userName, null);
 
-                        if (isPasswordCorrect) {
-                            // Simpan session
-                            session.createSession(userId, userName, userToken);
-
-                            Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                            finish(); // agar user tidak bisa kembali ke Login
-                        } else {
-                            Toast.makeText(this, "Password Salah", Toast.LENGTH_SHORT).show();
-                        }
+                                    Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
+                                    finish();
+                                })
+                                .addOnFailureListener(e -> {
+                                    Toast.makeText(this, "Gagal mengambil data user", Toast.LENGTH_SHORT).show();
+                                });
                     } else {
-                        Toast.makeText(this, "Akun Tidak Ditemukan", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Email atau Password salah", Toast.LENGTH_SHORT).show();
                     }
-                })
-                .addOnFailureListener(e ->
-                        Toast.makeText(this, "Gagal Login: " + e.getMessage(), Toast.LENGTH_SHORT).show()
-                );
+                });
     }
 }

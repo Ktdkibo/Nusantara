@@ -14,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.proyek.nusantara.R;
@@ -26,6 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding binding;
     private FirebaseFirestore db;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         db = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         setupAction();
     }
@@ -65,7 +69,9 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Lengkapi data", Toast.LENGTH_SHORT).show();
                 } else if (!email.endsWith("@gmail.com")) {
                     Toast.makeText(RegisterActivity.this, "Gunakan @gmail.com", Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (password.length() < 6) {
+                    Toast.makeText(RegisterActivity.this, "Password minimal 6 karakter", Toast.LENGTH_SHORT).show();
+                }else {
                     buatAkun(email, nama, password);
                 }
             }
@@ -73,26 +79,29 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void buatAkun(String email, String nama, String password) {
-        Map<String, Object> user = new HashMap<>();
-        user.put("email", email);
-        user.put("nama", nama);
-        user.put("password", password);
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                        String userId = firebaseUser.getUid();
 
-        db.collection("users")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(RegisterActivity.this, "Berhasil Membuat Akun", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(RegisterActivity.this, "Gagal Membuat Akun", Toast.LENGTH_SHORT).show();
+                        // Simpan data tambahan ke Firestore
+                        Map<String, Object> user = new HashMap<>();
+                        user.put("email", email);
+                        user.put("nama", nama);
+
+                        db.collection("users").document(userId)
+                                .set(user)
+                                .addOnSuccessListener(aVoid -> {
+                                    Toast.makeText(RegisterActivity.this, "Berhasil Membuat Akun", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                    finish();
+                                })
+                                .addOnFailureListener(e -> {
+                                    Toast.makeText(RegisterActivity.this, "Gagal Menyimpan Data", Toast.LENGTH_SHORT).show();
+                                });
+                    } else {
+                        Toast.makeText(RegisterActivity.this, "Gagal Membuat Akun: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
