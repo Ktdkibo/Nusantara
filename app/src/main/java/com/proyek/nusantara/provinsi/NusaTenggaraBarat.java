@@ -58,68 +58,51 @@ public class NusaTenggaraBarat extends AppCompatActivity {
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20bima.jpg", "Kabupaten Bima"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20dompu.avif", "Kabupaten Dompu"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20lombok%20barat.webp", "Kabupaten Lombok Barat"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20lombok%20timur.webp", "Kabupaten Lombok Timur"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20sumbawa.jpg", "Kabupaten Sumbawa")
     );
 
     private final List<PopupItem> alatmusik = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alat%20musik%20bima.jpg", "Kabupaten Bima"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alat%20musik%20dompu.jpg", "Kabupaten Dompu"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alat%20musik%20lombok%20barat.jpg", "Kabupaten Lombok Barat"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alat%20musik%20lombok%20timur.jpg", "Kabupaten Lombok Timur"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alat%20musik%20sumbawa.png", "Kabupaten Sumbawa")
     );
 
     private final List<PopupItem> upacara = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20bima.jpg", "Kabupaten Bima"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20dompu.jpg", "Kabupaten Dompu"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20lombok%20barat.jpg", "Kabupaten Lombok Barat"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20lombok%20timur.jpeg", "Kabupaten Lombok Timur"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20sumbawa.png", "Kabupaten Sumbawa")
     );
 
     private final List<PopupItem> senjata = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20bima.jpg", "Kabupaten Bima"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20dompu.jpg", "Kabupaten Dompu"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20lombok%20barat.jpg", "Kabupaten Lombok Barat"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20lombok%20timur.webp", "Kabupaten Lombok Timur"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/senjata%20sumbawa.jpg", "Kabupaten Sumbawa")
     );
 
     private final List<PopupItem> produk = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20dompu.jpg", "Kabupaten Dompu")
     );
 
     private final List<PopupItem> permainan = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20lombok%20barat.jpg", "Kabupaten Lombok Barat")
     );
 
     private final List<PopupItem> flora = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20bima.jpg", "Kabupaten Bima")
     );
 
     private final List<PopupItem> fauna = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/.jpg", "Kabupaten")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20bima.jpg", "Kabupaten Bima")
     );
 
     @Override

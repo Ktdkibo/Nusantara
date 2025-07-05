@@ -58,25 +58,18 @@ public class Aceh extends AppCompatActivity {
     );
 
     private final List<PopupItem> objekwisata = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/objekwisata%20pidie.jpg", "Kabupaten Pidie")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/wisata%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> alatmusik = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alatmusik%20pidie.jpg", "Kabupaten Pidie")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/alat%20musik%20aceh.jpg", "Provinsi Aceh")
     );
 
     private final List<PopupItem> upacara = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/upacara%20pidie.jpg", "Kabupaten Pidie")
     );
@@ -90,34 +83,19 @@ public class Aceh extends AppCompatActivity {
     );
 
     private final List<PopupItem> produk = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/produk%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> permainan = Arrays.asList(
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/permainan%20pidie.jpg", "Kabupaten Pidie")
     );
 
     private final List<PopupItem> flora = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/flora%20pidie.jpg", "Kabupaten Pidie")
+            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/lora%20gayo%20lues.jpg", "Kabupaten Gayo Lues")
     );
 
     private final List<PopupItem> fauna = Arrays.asList(
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20aceh%20jaya.jpg", "Kabupaten Aceh Jaya"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20aceh%20singkil.jpg", "Kabupaten Aceh Singkil"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20aceh%20tamiang.jpg", "Kabupaten Aceh Tamiang"),
-            new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20gayo%20lues.jpg", "Kabupaten Gayo Lues"),
             new PopupItem("https://web-nusantara.vercel.app/assets/drawable/fauna%20pidie.jpg", "Kabupaten Pidie")
     );
 
@@ -226,17 +204,22 @@ public class Aceh extends AppCompatActivity {
     public void showPopupSlider(Context context, List<PopupItem> items) {
         Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.dialog_popup_slider);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        params.copyFrom(dialog.getWindow().getAttributes());
+        params.width = (int) (context.getResources().getDisplayMetrics().widthPixels * 0.8);
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.getWindow().setAttributes(params);
         ViewPager2 viewPager = dialog.findViewById(R.id.viewPagerPopup);
         viewPager.setAdapter(new PopupPagerAdapter(context, items));
 
-        // Atur dialog fullscreen
-        if (dialog.getWindow() != null) {
-            dialog.getWindow()
-                    .setLayout(
-                            WindowManager.LayoutParams.MATCH_PARENT,
-                            WindowManager.LayoutParams.MATCH_PARENT
-                    );
-        }
+//        // Atur dialog fullscreen
+//        if (dialog.getWindow() != null) {
+//            dialog.getWindow()
+//                    .setLayout(
+//                            WindowManager.LayoutParams.MATCH_PARENT,
+//                            WindowManager.LayoutParams.MATCH_PARENT
+//                    );
+//        }
         dialog.show();
     }
 }
